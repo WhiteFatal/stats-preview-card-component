@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Lexend+Deca&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    :root {
+      --Very-dark-blue: hsl(233, 47%, 7%); /*(main background)*/
+      --Dark-desaturated-blue: hsl(244, 38%, 16%); /*(card background)*/
+      --Soft-violet: hsl(277, 64%, 61%); /*(accent)*/
+      --White: hsl(0, 0%, 100%); /* (main heading, stats)*/
+      --Transparent-white: hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
+      --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /* (stat headings)*/
+    }    
+    body {
+      background-color: var(--Very-dark-blue);
+      color: var(--White);
+      height: 100vh;      
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family:'inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }    
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background-color: var(--Dark-desaturated-blue);
+    }
+    .info-container{
+      display: flex;
+      flex-direction: column;
+      width: 25rem;
+      margin: 1.5rem 6rem 0 4rem;
+    }
+    h1 {
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
+    .accent {
+      color: var(--Soft-violet);
+    }
+    .information-box {
+      margin: 0 0 1rem 0;
+      width: 90%;
+      color: var(--Slightly-transparent-white);
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .data-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 3.5rem 0;
+    }    
+    .infobox {
+      width: 8rem;
+    }
+    .info-numbers {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .info-description {
+      font-family: 'Lexend Deca';
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--Transparent-white);
+      margin: 0.5rem 0;
+    }
+
+    .office-image{
+      width: 34.5rem;
+      border-radius: 0 10px 10px 0;
+      filter: grayscale(100%) brightness(50%) sepia(40%) hue-rotate(-115deg) saturate(600%) contrast(0.8);
+    }
+
+    .attribution { font-size: 11px; text-align: center; margin: 2rem; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media only screen and (max-width: 700px) {
+      main {
+        position: relative;
+        top: 6rem;
+        border-radius: 0 0 10px 10px;
+      }
+      .info-container {
+        max-width: 19rem;
+        margin: 1.5rem 1.5rem 0 1.5rem;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      .information-box {
+        width: 85%;
+        margin: 1rem auto;
+      }
+      .data-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      .office-image{
+        position: absolute;
+        top: -16.5rem;
+        width: 22rem;
+        border-radius: 10px 10px 0 0;   
+        z-index: -1;
+      }
+      .attribution {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="info-container">
+      <h1> Get <span class="accent">insights</span> that help your business grow. </h1>
+
+      <p class="information-box">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+      experience, and overall efficiency.</p>
+      
+      <div class="data-container">
+        <div class="infobox">
+          <p class="info-numbers">10k+</p>
+          <p class="info-description">companies</p>
+        </div>
+        <div class="infobox">
+          <p class="info-numbers">314</p>
+          <p class="info-description">templates</p>
+        </div>
+        <div class="infobox">
+          <p class="info-numbers">12M+</p>
+          <p class="info-description">queries</p>
+        </div>
+      </div>
+    </div>
+    <img class="office-image" src="./images/image-header-desktop.jpg" alt="office image" />
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/WhiteFatal">Night</a>.
+    </div>
+  </footer>
+</body>
+</html>
